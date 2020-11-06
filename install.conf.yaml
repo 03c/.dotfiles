@@ -10,3 +10,5 @@
     ~/.antigen.zsh: antigen.zsh
     ~/.zshrc: zshrc
     ~/.config/starship.toml: config/starship.toml
+    ~/.tmux.conf: .tmux/.tmux.conf
+    ~/.tmux.conf.local: tmux.conf.local

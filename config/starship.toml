@@ -1,0 +1,4 @@
+[character]
+success_symbol = "[➜](bold green)"
+[directory]
+truncation_symbol = ".../"

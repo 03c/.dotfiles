@@ -8,3 +8,4 @@
     ~/.gitconfig: gitconfig
     ~/.antigen.zsh: antigen.zsh
     ~/.zshrc: zshrc
+    ~/.config/starship.toml: config/starship.toml

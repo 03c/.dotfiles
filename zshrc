@@ -12,27 +12,7 @@ antigen bundle git
 antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle zsh-users/zsh-completions
 antigen bundle zsh-users/zsh-syntax-highlighting
-antigen bundle autojump
-antigen bundle ruby
-antigen bundle rails
-antigen bundle heroku
-antigen bundle node
-antigen bundle docker
-antigen bundle github
-antigen bundle bundler
-
 
 
 # Apply changes
 antigen apply
-
-eval "$(starship init zsh)"
-
-function set_win_title(){
-    echo -ne "\033]0; $PWD \007"
-}
-
-precmd_functions+=(set_win_title)
-
-# go home
-cd

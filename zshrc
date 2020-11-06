@@ -15,3 +15,5 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 
 # Apply changes
 antigen apply
+
+eval "$(starship init zsh)"

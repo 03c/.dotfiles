@@ -314,6 +314,28 @@ set -g mouse on
 #set -g status-position top
 
 set-option -g default-shell /bin/zsh
+
+# split panes using | and -
+bind | split-window -h
+bind - split-window -v
+unbind '"'
+unbind %
+
+#Shift arrow to switch sessions
+bind -n S-Left switch-client -p
+bind -n S-Right switch-client -n
+
+# CTRL arrow to switch windows
+bind -n C-Left  previous-window
+bind -n C-Right next-window
+
+# switch panes using Alt-arrow without prefix
+bind -n M-Left select-pane -L
+bind -n M-Right select-pane -R
+bind -n M-Up select-pane -U
+bind -n M-Down select-pane -D
+
+
 # -- custom variables ----------------------------------------------------------
 # to define a custom #{foo} variable, define a POSIX shell function between the
 # '# EOF' and the '# "$@"' lines. Please note that the opening brace { character
@@ -341,5 +363,7 @@ set-option -g default-shell /bin/zsh
 run-shell ~/.tmux/plugins/tmux-resurrect/resurrect.tmux
 run-shell ~/.tmux/plugins/tmux-continuum/continuum.tmux
 
+set -g @resurrect-save-bash-history 'on'
+set -g @resurrect-capture-pane-contents 'on'
 set -g @continuum-restore 'on'
 set -g @continuum-save-interval '5'

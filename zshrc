@@ -8,6 +8,7 @@ antigen use oh-my-zsh
 antigen theme robbyrussell
 
 # Set plugins (plugins not part of Oh-My-Zsh can be installed using githubusername/repo)
+antigen bundle tmux
 antigen bundle git
 antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle zsh-users/zsh-completions
@@ -28,9 +29,3 @@ eval "$(starship init zsh)"
 antigen apply
 
 cd
-
-#if which tmux 2>&1 >/dev/null; then
- # if [ $TERM != "screen-256color" ] && [  $TERM != "screen" ]; then
- #   tmux attach -t hack || tmux new -s hack; exit
- # fi
-#fi

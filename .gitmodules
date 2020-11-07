@@ -6,7 +6,3 @@
 	path = .tmux
 	url = https://github.com/gpakosz/.tmux.git
 	branch = tpm
-[submodule "tpm"]
-	path = tpm
-	url = https://github.com/tmux-plugins/tpm
-	ignore = dirty

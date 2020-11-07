@@ -12,6 +12,3 @@
     ~/.config/starship.toml: config/starship.toml
     ~/.tmux.conf: .tmux/.tmux.conf
     ~/.tmux.conf.local: tmux.conf.local
-    ~/.tmux/plugins/tpm:
-        create: true
-        path: tpm

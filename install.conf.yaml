@@ -12,9 +12,3 @@
     ~/.config/starship.toml: config/starship.toml
     ~/.tmux.conf: .tmux/.tmux.conf
     ~/.tmux.conf.local: tmux.conf.local
-    ~/.tmux/plugins/tmux-resurrect:
-      path: tmux-resurrect
-      create: true
-    ~/.tmux/plugins/tmux-continuum:
-      path: tmux-continuum
-      create: true

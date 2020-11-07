@@ -130,7 +130,7 @@ tmux_conf_theme_terminal_title="❐ #S ● #W"
 tmux_conf_theme_window_status_fg="$tmux_conf_theme_colour_3"
 tmux_conf_theme_window_status_bg="$tmux_conf_theme_colour_1"
 tmux_conf_theme_window_status_attr="none"
-#tmux_conf_theme_window_status_format="#W"
+#tmux_conf_theme_window_status_format="#I #W"
 #tmux_conf_theme_window_status_format="#{circled_window_index} #W"
 tmux_conf_theme_window_status_format="#W#{?window_bell_flag,🔔,}#{?window_zoomed_flag,🔍,}"
 
@@ -199,8 +199,7 @@ tmux_conf_theme_right_separator_sub="|"
 #     - #{username}
 #     - #{username_ssh}
 tmux_conf_theme_status_left=" ❐ #S "
-#tmux_conf_theme_status_right="#{prefix}#{pairing}#{synchronized}|#{continuum_last_saved}"
-tmux_conf_theme_status_right="#{continuum_last_saved}"
+tmux_conf_theme_status_right="#{prefix}#{pairing}#{synchronized}|#{continuum_last_saved}"
 
 # status left style
 tmux_conf_theme_status_left_fg="$tmux_conf_theme_colour_6,$tmux_conf_theme_colour_7,$tmux_conf_theme_colour_8"
@@ -316,28 +315,31 @@ set -g mouse on
 
 set-option -g default-shell /bin/zsh
 
-# split panes using | and -
-bind | split-window -h
-bind - split-window -v
-unbind '"'
-unbind %
+# -- tpm -----------------------------------------------------------------------
 
-#Shift arrow to switch sessions
-bind -n S-Left switch-client -p
-bind -n S-Right switch-client -n
+# while I don't use tpm myself, many people requested official support so here
+# is a seamless integration that automatically installs plugins in parallel
 
-# CTRL arrow to switch windows
-bind -n C-Left  previous-window
-bind -n C-Right next-window
+# whenever a plugin introduces a variable to be used in 'status-left' or
+# 'status-right', you can use it in 'tmux_conf_theme_status_left' and
+# 'tmux_conf_theme_status_right' variables.
 
-# switch panes using Alt-arrow without prefix
-bind -n M-Left select-pane -L
-bind -n M-Right select-pane -R
-bind -n M-Up select-pane -U
-bind -n M-Down select-pane -D
+# /!\ do not add set -g @plugin 'tmux-plugins/tpm'
+# /!\ do not add run '~/.tmux/plugins/tpm/tpm'
 
+# to enable a plugin, use the 'set -g @plugin' syntax:
+# visit https://github.com/tmux-plugins for available plugins
+
+#set -g @plugin 'tmux-plugins/tmux-resurrect'
+#set -g @plugin 'tmux-plugins/tmux-continuum'
+
+#set -g @resurrect-save-bash-history 'on'
+#set -g @resurrect-capture-pane-contents 'on'
+#set -g @continuum-restore 'on'
+#set -g @continuum-save-interval '5'
 
 # -- custom variables ----------------------------------------------------------
+
 # to define a custom #{foo} variable, define a POSIX shell function between the
 # '# EOF' and the '# "$@"' lines. Please note that the opening brace { character
 # must be on the same line as the function name otherwise the parse won't detect
@@ -360,11 +362,3 @@ bind -n M-Down select-pane -D
 #
 # "$@"
 # # /!\ do not remove the previous line
-
-run-shell ~/.tmux/plugins/tmux-resurrect/resurrect.tmux
-run-shell ~/.tmux/plugins/tmux-continuum/continuum.tmux
-
-set -g @resurrect-save-bash-history 'on'
-set -g @resurrect-capture-pane-contents 'on'
-set -g @continuum-restore 'on'
-set -g @continuum-save-interval '5'

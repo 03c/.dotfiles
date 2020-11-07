@@ -208,7 +208,6 @@ set-option -g default-shell /bin/zsh
 set -g @plugin 'tmux-plugins/tmux-resurrect'
 set -g @plugin christopherchild/tmux-continuum
 
-set -g @resurrect-save-bash-history 'on'
 set -g @resurrect-capture-pane-contents 'on'
 set -g @continuum-restore 'on'
 set -g @continuum-save-interval '5'

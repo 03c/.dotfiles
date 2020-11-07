@@ -5,7 +5,7 @@ source $HOME/.antigen.zsh
 antigen use oh-my-zsh
 
 # Set theme
-antigen theme clean
+antigen theme robbyrussell
 
 # Set plugins (plugins not part of Oh-My-Zsh can be installed using githubusername/repo)
 antigen bundle git
@@ -26,3 +26,11 @@ eval "$(starship init zsh)"
 
 # Apply changes
 antigen apply
+
+cd
+
+#if which tmux 2>&1 >/dev/null; then
+ # if [ $TERM != "screen-256color" ] && [  $TERM != "screen" ]; then
+ #   tmux attach -t hack || tmux new -s hack; exit
+ # fi
+#fi

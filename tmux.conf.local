@@ -119,7 +119,7 @@ tmux_conf_theme_right_separator_sub="|"
 
 # status left/right content:
 tmux_conf_theme_status_left=" ❐ #S "
-tmux_conf_theme_status_right="#{prefix}#{pairing}#{synchronized}|Save in #{continuum_countdown} min"
+tmux_conf_theme_status_right="#{prefix}#{pairing}#{synchronized}|Save in #{continuum_countdown} secs"
 
 # status left style
 tmux_conf_theme_status_left_fg="$tmux_conf_theme_colour_6,$tmux_conf_theme_colour_7,$tmux_conf_theme_colour_8"
@@ -185,6 +185,19 @@ tmux_conf_theme_clock_style="24"
 tmux_conf_copy_to_os_clipboard=false
 
 # -- user customizations -------------------------------------------------------
+# Shift arrow to switch sessions
+bind -n S-Left switch-client -p
+bind -n S-Right switch-client -n
+
+# Ctrl arrow to switch windows
+bind -n C-Left  previous-window
+bind -n C-Right next-window
+
+# Use Alt-arrow keys without prefix key to switch panes
+bind -n M-Left select-pane -L
+bind -n M-Right select-pane -R
+bind -n M-Up select-pane -U
+bind -n M-Down select-pane -D
 
 # move status line to top
 #set -g status-position top

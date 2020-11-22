@@ -1,3 +1,6 @@
+#RVM
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" 
+
 # Use antigen
 source $HOME/.antigen.zsh
 
@@ -21,6 +24,7 @@ antigen bundle node
 antigen bundle docker
 antigen bundle github
 antigen bundle bundler
+antigen bundle rake
 
 #starfish
 eval "$(starship init zsh)"

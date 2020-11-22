@@ -1,5 +1,5 @@
 {
-  ""trailingCOma: "es5"
+  "trailingComma": "all"
   "tabWidth": 2,
   "useTabs": false,
   "singleQuoye: true,

@@ -14,13 +14,11 @@ zsh, tmux, antigen, oh my tmux, tmux-resurect, tmux-continuum, starship
 
 `ssh-keygen`
 
-`sudo apt install python-is-python3`
+`sudo apt install python-is-python3 zsh`
 
 `git clone git@github.com:christopherchild/.dotfiles.git`
 
 `curl -fsSL https://starship.rs/install.sh | bash`
-
-`sudo apt install zsh`
 
 `git clone git://github.com/wting/autojump.git`
 

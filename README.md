@@ -8,6 +8,8 @@ zsh, tmux, antigen, oh my tmux, tmux-resurect, tmux-continuum, starship
 
 # Install
 
+`sudo apt update && apt -y upgrade`
+
 `cd`
 
 `git clone git@github.com:christopherchild/.dotfiles.git`

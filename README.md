@@ -14,6 +14,8 @@ zsh, tmux, antigen, oh my tmux, tmux-resurect, tmux-continuum, starship
 
 `git clone git@github.com:christopherchild/.dotfiles.git`
 
+`sudo apt install python-is-python3`
+
 `curl -fsSL https://starship.rs/install.sh | bash`
 
 `git clone git://github.com/wting/autojump.git`

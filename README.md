@@ -12,9 +12,11 @@ zsh, tmux, antigen, oh my tmux, tmux-resurect, tmux-continuum, starship
 
 `cd`
 
-`git clone git@github.com:christopherchild/.dotfiles.git`
+`ssh-keygen`
 
 `sudo apt install python-is-python3`
+
+`git clone git@github.com:christopherchild/.dotfiles.git`
 
 `curl -fsSL https://starship.rs/install.sh | bash`
 

@@ -119,7 +119,7 @@ tmux_conf_theme_right_separator_sub="|"
 
 # status left/right content:
 tmux_conf_theme_status_left=" ❐ #S "
-tmux_conf_theme_status_right="#{prefix}#{pairing}#{synchronized}|#{cpu_fg_color} CPU: #{cpu_percentage} | Save in #{continuum_countdown} secs"
+tmux_conf_theme_status_right="#{prefix}#{pairing}#{synchronized}"
 
 # status left style
 tmux_conf_theme_status_left_fg="$tmux_conf_theme_colour_6,$tmux_conf_theme_colour_7,$tmux_conf_theme_colour_8"
@@ -210,7 +210,7 @@ set -g status-interval 1
 set-option -g default-shell /bin/zsh
 
 set -g @plugin 'tmux-plugins/tmux-resurrect'
-set -g @plugin christopherchild/tmux-continuum
+set -g @plugin 'tmux-plugins/tmux-continuum'
 set -g @plugin 'tmux-plugins/tmux-cpu'
 
 set -g @resurrect-capture-pane-contents 'on'

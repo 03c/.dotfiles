@@ -26,4 +26,6 @@ zsh, tmux, antigen, oh my tmux, tmux-resurect, tmux-continuum, starship
 
 `cd`
 
+`rm -rf autojump`
+
 `.dotfiles/install`

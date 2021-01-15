@@ -10,7 +10,9 @@
     ~/.bashrc:
       force: true
       path: bashrc
-    ~/.bash_logout: bash_logout
+    ~/.bash_logout:
+      force: true
+      path: bash_logout
     ~/.hushlogin: hushlogin
     ~/.gitconfig: gitconfig
     ~/.antigen.zsh: antigen.zsh

@@ -14,6 +14,8 @@ zsh, tmux, antigen, oh my tmux, tmux-resurect, tmux-continuum, starship
 
 `curl -fsSL https://starship.rs/install.sh | bash`
 
+`sudo apt-get install python2.7`
+
 `git clone git://github.com/wting/autojump.git`
 
 `cd autojump`

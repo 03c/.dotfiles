@@ -8,7 +8,7 @@ zsh, tmux, antigen, oh my tmux, tmux-resurect, tmux-continuum, starship
 
 # Install
 
-`sudo apt update && apt -y upgrade`
+`sudo apt update && sudo apt -y upgrade`
 
 `cd`
 

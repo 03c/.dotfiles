@@ -38,3 +38,7 @@ zsh, tmux, antigen, oh my tmux, tmux-resurect, tmux-continuum, starship
 `sudo apt-get update`
 `sudo apt-get install rvm`
 `sudo usermod -a -G rvm cchild`
+
+# NVM
+
+`curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash`

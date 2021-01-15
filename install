@@ -8,6 +8,9 @@ DOTBOT_DIR="dotbot"
 DOTBOT_BIN="bin/dotbot"
 BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
+#make config dir
+mkdir .config
+
 #install starship
 curl -fsSL https://starship.rs/install.sh | bash
 

@@ -1,9 +1,15 @@
 - clean: ['~']
 
 - link:
-    ~/.profile: profile
-    ~/.bash_profile: bash_profile
-    ~/.bashrc: bashrc
+    ~/.profile:
+      force: true
+      path: profile
+    ~/.bash_profile:
+      force: true
+      path: bash_profile
+    ~/.bashrc:
+      force: true
+      path: bashrc
     ~/.bash_logout: bash_logout
     ~/.hushlogin: hushlogin
     ~/.gitconfig: gitconfig

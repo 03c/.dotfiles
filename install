@@ -11,6 +11,9 @@ BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 #install starship
 curl -fsSL https://starship.rs/install.sh | bash
 
+#install autojump
+apt install autojump
+
 cd "${BASEDIR}"
 git -C "${DOTBOT_DIR}" submodule sync --quiet --recursive
 git submodule update --init --recursive

@@ -11,6 +11,7 @@ antigen use oh-my-zsh
 antigen theme robbyrussell
 
 # Set plugins (plugins not part of Oh-My-Zsh can be installed using githubusername/repo)
+antigen bundle lukechilds/zsh-nvm
 antigen bundle tmux
 antigen bundle git
 antigen bundle zsh-users/zsh-autosuggestions

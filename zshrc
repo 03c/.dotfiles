@@ -1,6 +1,3 @@
-#RVM
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" 
-
 # Use antigen
 source $HOME/.antigen.zsh
 
@@ -14,6 +11,8 @@ antigen theme robbyrussell
 antigen bundle lukechilds/zsh-nvm
 antigen bundle tmux
 antigen bundle git
+antigen bundle nvm
+antigen bundle rvm
 antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle zsh-users/zsh-completions
 antigen bundle zsh-users/zsh-syntax-highlighting

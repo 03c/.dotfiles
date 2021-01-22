@@ -209,12 +209,12 @@ set -g status-interval 1
 
 set-option -g default-shell /usr/bin/zsh
 
-#set -g @plugin 'tmux-plugins/tmux-resurrect'
-#set -g @plugin 'tmux-plugins/tmux-continuum'
+set -g @plugin 'tmux-plugins/tmux-resurrect'
+set -g @plugin 'tmux-plugins/tmux-continuum'
 
 #set -g @resurrect-capture-pane-contents 'on'
-#set -g @continuum-restore 'on'
-#set -g @continuum-save-interval '5'
+set -g @continuum-restore 'on'
+set -g @continuum-save-interval '5'
 
 # -- custom variables ----------------------------------------------------------
 

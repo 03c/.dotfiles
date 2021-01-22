@@ -186,11 +186,6 @@ tmux_conf_copy_to_os_clipboard=false
 
 # -- user customizations -------------------------------------------------------
 
-set -g bell-action any
-set -g visual-bell off
-set -g bell-on-alert off
-set -g visual-activity off
-
 # start with mouse mode enabled
 set -g mouse on
 

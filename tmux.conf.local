@@ -3,7 +3,7 @@
 # -- windows & pane creation ---------------------------------------------------
 
 # new window retains current path, possible values are:
-tmux_conf_new_window_retain_current_path=false
+tmux_conf_new_window_retain_current_path=true
 
 # new pane retains current path, possible values are:
 tmux_conf_new_pane_retain_current_path=true
@@ -88,23 +88,23 @@ tmux_conf_theme_terminal_title="❐ #S ● #W"
 tmux_conf_theme_window_status_fg="$tmux_conf_theme_colour_4"
 tmux_conf_theme_window_status_bg="$tmux_conf_theme_colour_2"
 tmux_conf_theme_window_status_attr="none"
-tmux_conf_theme_window_status_format="#W#{?window_bell_flag,🔔,}#{?window_zoomed_flag,🔍,}"
+tmux_conf_theme_window_status_format="#W"
 
 # window current status style
 tmux_conf_theme_window_status_current_fg="$tmux_conf_theme_colour_1"
 tmux_conf_theme_window_status_current_bg="$tmux_conf_theme_colour_4"
 tmux_conf_theme_window_status_current_attr="none"
-tmux_conf_theme_window_status_current_format="#W#{?window_zoomed_flag,🔍,}"
+tmux_conf_theme_window_status_current_format="#W"
 
 # window activity status style
-tmux_conf_theme_window_status_activity_fg="default"
-tmux_conf_theme_window_status_activity_bg="default"
+tmux_conf_theme_window_status_activity_fg="$tmux_conf_theme_colour_4"
+tmux_conf_theme_window_status_activity_bg="$tmux_conf_theme_colour_2"
 tmux_conf_theme_window_status_activity_attr="none"
 
 # window bell status style
-tmux_conf_theme_window_status_bell_fg="$tmux_conf_theme_colour_5"
-tmux_conf_theme_window_status_bell_bg="default"
-tmux_conf_theme_window_status_bell_attr="blink,bold"
+tmux_conf_theme_window_status_bell_fg="$tmux_conf_theme_colour_4"
+tmux_conf_theme_window_status_bell_bg=""
+tmux_conf_theme_window_status_bell_attr="bold"
 
 # window last status style
 tmux_conf_theme_window_status_last_fg="$tmux_conf_theme_colour_4"
@@ -185,6 +185,11 @@ tmux_conf_theme_clock_style="24"
 tmux_conf_copy_to_os_clipboard=false
 
 # -- user customizations -------------------------------------------------------
+
+set -g bell-action any
+set -g visual-bell off
+set -g bell-on-alert off
+set -g visual-activity off
 
 # start with mouse mode enabled
 set -g mouse on
